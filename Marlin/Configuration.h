@@ -97,7 +97,7 @@
 #define DELTA_CARRIAGE_OFFSET 18.0 // mm
 
 // Effective horizontal distance bridged by diagonal push rods.
-#define DELTA_RADIUS ((DELTA_SMOOTH_ROD_OFFSET-DELTA_EFFECTOR_OFFSET-DELTA_CARRIAGE_OFFSET)-2)
+#define DELTA_RADIUS ((DELTA_SMOOTH_ROD_OFFSET-DELTA_EFFECTOR_OFFSET-DELTA_CARRIAGE_OFFSET)-3)
 
 #define DELTA_DIAGONAL_ROD_2 sq(DELTA_DIAGONAL_ROD)
 
@@ -354,7 +354,7 @@ const bool Z_MAX_ENDSTOP_INVERTING = true; // set to true to invert the logic of
 // For deltabots this means top and center of the cartesian print volume.
 #define MANUAL_X_HOME_POS 0
 #define MANUAL_Y_HOME_POS 0
-#define MANUAL_Z_HOME_POS 377.5 // For delta: Distance between nozzle and print surface after homing.
+#define MANUAL_Z_HOME_POS 377 // For delta: Distance between nozzle and print surface after homing.
 
 //// MOVEMENT SETTINGS
 #define NUM_AXIS 4 // The axis order in all axis related arrays is X, Y, Z, E
