@@ -73,7 +73,7 @@
 #define DELTA_DIAGONAL_ROD 271.0 // mm
 
 // Horizontal offset from middle of printer to smooth rod center.
-#define DELTA_SMOOTH_ROD_OFFSET 175.0 // mm
+#define DELTA_SMOOTH_ROD_OFFSET 174.9 // mm
 
 // Horizontal offset of the universal joints on the end effector.
 #define DELTA_EFFECTOR_OFFSET 33.0 // mm
@@ -176,9 +176,17 @@
   #define PID_dT ((OVERSAMPLENR * 10.0)/(F_CPU / 64.0 / 256.0)) //sampling period of the temperature routine
 
 // e3d v5 with Folger-Tech 100K NTC Thermistor
-   #define  DEFAULT_Kp 12.2
-   #define  DEFAULT_Ki 0.62
-   #define  DEFAULT_Kd 60.23
+// OLD, these values generated from autotune in April 2015
+//   #define  DEFAULT_Kp 12.2
+//   #define  DEFAULT_Ki 0.62
+//   #define  DEFAULT_Kd 60.23
+
+// new values 11/6/2015
+//                    195C    185C
+   #define  DEFAULT_Kp 12.70 //11.27
+   #define  DEFAULT_Ki 0.72  // 0.61
+   #define  DEFAULT_Kd 56.19 //52.38
+
 
 // MakerGear
 //    #define  DEFAULT_Kp 7.0
@@ -375,7 +383,7 @@ const bool Z_MAX_ENDSTOP_INVERTING = true; // set to true to invert the logic of
 // For deltabots this means top and center of the Cartesian print volume.
 #define MANUAL_X_HOME_POS 0
 #define MANUAL_Y_HOME_POS 0
-#define MANUAL_Z_HOME_POS 360 //367.5 // For delta: Distance between nozzle and print surface after homing.
+#define MANUAL_Z_HOME_POS 359.3 //367.5 // For delta: Distance between nozzle and print surface after homing.
 
 //// MOVEMENT SETTINGS
 #define NUM_AXIS 4 // The axis order in all axis related arrays is X, Y, Z, E
